@@ -7,7 +7,7 @@ from telegram.ext import ApplicationBuilder, ContextTypes, MessageHandler, filte
 # === CONFIGURATION ===
 TELEGRAM_TOKEN = "7398804409:AAEl_rmFkjPCZlDx1H7Tz0AjmX-K5aPqG74"
 GITHUB_USERNAME = "navvirk"
-GITHUB_REPO = "My-Punjabi-girlfriend-"
+GITHUB_REPO = "My-Punjabi-girlfriend"
 GITHUB_FILE = "romantic.txt"
 WEBHOOK_URL = "https://punjabi-gf-bot.onrender.com"  # e.g. https://your-render-url.onrender.com
 
