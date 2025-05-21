@@ -6,13 +6,13 @@ from telegram.ext import ApplicationBuilder, ContextTypes, MessageHandler, filte
 
 # === CONFIGURATION ===
 TELEGRAM_TOKEN = os.getenv(7398804409:AAEl_rmFkjPCZlDx1H7Tz0AjmX-K5aPqG74)
-GITHUB_USERNAME = "your-navvirk"
+GITHUB_USERNAME = "navvirk"
 GITHUB_REPO = "My-Punjabi-girlfriend-"
 GITHUB_FILE = "romantic.txt"
-WEBHOOK_URL = os.getenv("https://punjabi-gf-bot.onrender.com")  # e.g. https://your-render-url.onrender.com
+WEBHOOK_URL = os.getenv(https://punjabi-gf-bot.onrender.com)  # e.g. https://your-render-url.onrender.com
 
 async def get_random_reply():
-    url = f"https://api.github.com/repos/{GITHUB_USERNAME}/{GITHUB_REPO}/contents/{GITHUB_FILE}"
+    url = f"https://api.github.com/repos/virkxnav/My-Punjabi-girlfreind-/contents/romantic.txt"
     headers = {"Accept": "application/vnd.github.v3.raw"}
     response = requests.get(url, headers=headers)
 
