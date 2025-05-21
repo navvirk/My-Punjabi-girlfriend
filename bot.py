@@ -12,7 +12,7 @@ GITHUB_FILE = "romantic.txt"
 WEBHOOK_URL = "https://punjabi-gf-bot.onrender.com"  # e.g. https://your-render-url.onrender.com
 
 async def get_random_reply():
-    url = f"https://api.github.com/repos/virkxnav/My-Punjabi-girlfreind-/contents/romantic.txt"
+    url = f"https://api.github.com/repos/virkxnav/My-Punjabi-girlfreind/contents/romantic.txt"
     headers = {"Accept": "application/vnd.github.v3.raw"}
     response = requests.get(url, headers=headers)
 
