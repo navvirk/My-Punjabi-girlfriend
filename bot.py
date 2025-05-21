@@ -1,18 +1,23 @@
-import requests
+import logging
 import random
-import os
+import requests
 from telegram import Update
 from telegram.ext import ApplicationBuilder, ContextTypes, MessageHandler, filters
 
 # === CONFIGURATION ===
-TELEGRAM_TOKEN = "7398804409:AAEl_rmFkjPCZlDx1H7Tz0AjmX-K5aPqG74"
-GITHUB_USERNAME = "navvirk"
-GITHUB_REPO = "My-Punjabi-girlfriend"
+TOKEN = "7398804409:AAEl_rmFkjPCZlDx1H7Tz0AjmX-K5aPqG74"
+WEBHOOK_URL = "https://punjabi-gf-bot.onrender.com"
+
+GITHUB_USERNAME = "navvirk"  # Replace with actual
+GITHUB_REPO = "My-Punjabi-girlfriend"  # Replace with actual
 GITHUB_FILE = "romantic.txt"
-WEBHOOK_URL = "https://punjabi-gf-bot.onrender.com"  # e.g. https://your-render-url.onrender.com
+
+# === Enable logging ===
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 async def get_random_reply():
-    url = f"https://api.github.com/repos/virkxnav/My-Punjabi-girlfreind/contents/romantic.txt"
+    url = f"https://api.github.com/repos/navvirk/My-Punjabi-girlfriend/contents/romantic.txt"
     headers = {"Accept": "application/vnd.github.v3.raw"}
     response = requests.get(url, headers=headers)
 
@@ -23,16 +28,18 @@ async def get_random_reply():
         return "Sorry jaan, GitHub ch kujh error aa gayi."
 
 async def respond(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    logger.info(f"Message received: {update.message.text}")
     reply = await get_random_reply()
     await update.message.reply_text(reply)
 
+# === Main App ===
 if __name__ == '__main__':
-    app = ApplicationBuilder().token(TELEGRAM_TOKEN).build()
+    app = ApplicationBuilder().token(TOKEN).build()
     app.add_handler(MessageHandler(filters.TEXT & (~filters.COMMAND), respond))
-
-    # Set webhook
+    
+    # Webhook mode
     app.run_webhook(
         listen="0.0.0.0",
-        port=int(os.environ.get("PORT", 8080)),
-        webhook_url=WEBHOOK_URL
+        port=10000,
+        webhook_url=WEBHOOK_URL,
     )
