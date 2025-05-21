@@ -13,7 +13,7 @@ GITHUB_FILE = "romantic.txt"
 
 # === BOT LOGIC ===
 async def get_random_reply():
-    url = f"https://api.github.com/repos/{GITHUB_USERNAME}/{GITHUB_REPO}/contents/{GITHUB_FILE}"
+    url = f"https://api.github.com/repos/navvirk/My-Punjabi-girlfreind/contents/bot.py"
     headers = {"Accept": "application/vnd.github.v3.raw"}
     response = requests.get(url, headers=headers)
 
@@ -40,7 +40,7 @@ async def handle_webhook(request):
 if __name__ == "__main__":
     import asyncio
 
-    app = ApplicationBuilder().token(TELEGRAM_TOKEN).build()
+    app = ApplicationBuilder().token(7398804409:AAEl_rmFkjPCZlDx1H7Tz0AjmX-K5aPqG74).build()
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, respond))
 
     async def run():
