@@ -6,7 +6,7 @@ from telegram.ext import ApplicationBuilder, ContextTypes, MessageHandler, filte
 # === CONFIGURATION ===
 TELEGRAM_TOKEN = "7398804409:AAEl_rmFkjPCZlDx1H7Tz0AjmX-K5aPqG74"
 GITHUB_USERNAME = "your-navvirk"
-GITHUB_REPO = "My-Punjabi-girlfriend"
+GITHUB_REPO = "My-Punjabi-girlfriend-"
 GITHUB_FILE = "romantic.txt"
 
 async def get_random_reply():
