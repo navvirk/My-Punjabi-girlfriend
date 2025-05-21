@@ -9,7 +9,7 @@ TELEGRAM_TOKEN = os.getenv(7398804409:AAEl_rmFkjPCZlDx1H7Tz0AjmX-K5aPqG74)
 GITHUB_USERNAME = "your-navvirk"
 GITHUB_REPO = "My-Punjabi-girlfriend-"
 GITHUB_FILE = "romantic.txt"
-WEBHOOK_URL = os.getenv("WEBHOOK_URL")  # e.g. https://your-render-url.onrender.com
+WEBHOOK_URL = os.getenv("https://punjabi-gf-bot.onrender.com")  # e.g. https://your-render-url.onrender.com
 
 async def get_random_reply():
     url = f"https://api.github.com/repos/{GITHUB_USERNAME}/{GITHUB_REPO}/contents/{GITHUB_FILE}"
