@@ -5,7 +5,7 @@ from telegram import Update
 from telegram.ext import ApplicationBuilder, ContextTypes, MessageHandler, filters
 
 # === CONFIGURATION ===
-TELEGRAM_TOKEN = os.getenv("7398804409:AAEl_rmFkjPCZlDx1H7Tz0AjmX-K5aPqG74")
+TELEGRAM_TOKEN = os.getenv(7398804409:AAEl_rmFkjPCZlDx1H7Tz0AjmX-K5aPqG74)
 GITHUB_USERNAME = "your-navvirk"
 GITHUB_REPO = "My-Punjabi-girlfriend-"
 GITHUB_FILE = "romantic.txt"
